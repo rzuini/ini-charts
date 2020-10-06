@@ -3,25 +3,29 @@
 # Declare variables to be passed into your templates.
 elasticsearch:
   enabled: true
-  image: "ranchercharts/elasticsearch-elasticsearch"
-  imageTag: "7.3.0"
+  # image: "ranchercharts/elasticsearch-elasticsearch"
+  image: "elasticsearch"
+  imageTag: "7.9.2"
   enableProxy: true
 
 
 kibana:
   enabled: true
-  image: "ranchercharts/kibana-kibana"
-  imageTag: "7.3.0"
+  # image: "ranchercharts/kibana-kibana"
+  image: "kibana"
+  imageTag: "7.9.2"
 
 filebeat:
   enabled: true
-  image: "ranchercharts/beats-filebeat"
-  imageTag: "7.3.0"
+  # image: "ranchercharts/beats-filebeat"
+  image: "elastic/filebeat"
+  imageTag: "7.9.2"
 
 metricbeat:
   enabled: true
-  image: "ranchercharts/beats-metricbeat"
-  imageTag: "7.3.0"
+  # image: "ranchercharts/beats-metricbeat"
+  image: "elastic/metricbeat"
+  imageTag: "7.9.2"
   kube-state-metrics:
     image:
       repository: ranchercharts/coreos-kube-state-metrics
